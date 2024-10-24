@@ -141,6 +141,3 @@ class WhatsAppChat {
         }, 4 * animationDuration + 500);
     }
 }
-
-// استخدام الكلاس
-WhatsAppChat.init('.chat-whatsapp', '+967771508902', 'فرصتي', 'customer/assets/logo.png', 'ar');
