@@ -1,4 +1,4 @@
-class WhatsAppChat {
+class WhatsAppFloatingButton {
     // إعداد الرسائل حسب اللغة
     static messages = {
         en: {
