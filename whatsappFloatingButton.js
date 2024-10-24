@@ -27,7 +27,7 @@ class WhatsAppFloatingButton {
         const currentLang = this.messages[lang];
         this.createChatHTML(container, currentLang, appName, image);
         this.setupEventListeners(phoneNumber);
-        WhatsAppChat.runAnimationCycle(container.querySelector('.box-whatsapp'), container.querySelector('.box-message'), 2000);
+        WhatsAppFloatingButton.runAnimationCycle(container.querySelector('.box-whatsapp'), container.querySelector('.box-message'), 2000);
     }
 
     // دالة لإنشاء HTML واجهة الدردشة
@@ -130,14 +130,14 @@ class WhatsAppFloatingButton {
             boxMessage.classList.add('hide');
         }
     }
-
-    // دالة لتشغيل دورة الانميش
+    
+    // دالة لتشغيل الرسوم المتحركة
     static runAnimationCycle(boxWhatsApp, boxMessage, animationDuration) {
-        WhatsAppChat.toggleAnimation('paused', boxWhatsApp, boxMessage);
+        WhatsAppFloatingButton.toggleAnimation('paused', boxWhatsApp, boxMessage);
         setTimeout(() => {
             console.log(4 * animationDuration + 150);
-            WhatsAppChat.toggleAnimation('running', boxWhatsApp, boxMessage);
-            setTimeout(() => WhatsAppChat.runAnimationCycle(boxWhatsApp, boxMessage, animationDuration), 8500);
+            WhatsAppFloatingButton.toggleAnimation('running', boxWhatsApp, boxMessage);
+            setTimeout(() => WhatsAppFloatingButton.runAnimationCycle(boxWhatsApp, boxMessage, animationDuration), 8500);
         }, 4 * animationDuration + 500);
     }
 }
